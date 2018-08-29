@@ -1,5 +1,5 @@
-title: Cayman theme
-description: Cayman is a clean, responsive theme for GitHub Pages.
+title: Huemul Solutions - BigData Governance
+description: Acelerador de proyectos BigData basado en modelos de Gobierno de Datos.
 show_downloads: true
-google_analytics:
+google_analytics: true
 theme: jekyll-theme-cayman
