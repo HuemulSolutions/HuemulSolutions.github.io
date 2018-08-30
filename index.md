@@ -67,6 +67,7 @@ Las rutas de almacenamiento en HDFS dentro del servidor se definen en un fichero
 ### DQ: Reglas de Validez de datos
 
 > Asegurar que los datos se estén cargando con las especificaciones correctas es fundamental para el uso de esta información, aplicar estas reglas est muy sencillo, solo debes agregar una línea de código!.
+
 ```scala
 //Define campo pais_id
 val pais_id = new huemul_Columns(StringType,true,"Codigo internacional del país. Ejemplo: chile codigo 056")
@@ -82,6 +83,7 @@ val pais_id = new huemul_Columns(StringType,true,"Codigo internacional del país
 ### DQ: Integridad de Datos y Valores Únicos
 
 > Puedes especificar que los valores en tu tabla sean únicos, ya sea identificando una Primary Key, o indicando en cada campo si el valor es único o no.
+
 ```scala
 //Define campo pais_id
 val pais_id = new huemul_Columns(StringType,true,"Codigo internacional del país. Ejemplo: chile codigo 056")
@@ -93,6 +95,7 @@ val pais_nombre = new huemul_Columns(StringType,true,"Nombre del país. Ejemplo:
     pais_nombre.IsUnique = true
    
 ```
+
 > Listo!, integridad de datos aplicada.
 
 
