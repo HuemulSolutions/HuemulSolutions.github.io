@@ -2,13 +2,41 @@
 layout: default
 ---
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
+**Reduce en más de 5 veces el tiempo y esfuerzo de desarrollo de tus proyectos BigData!!!!**
 
-[Link to another page](./another-page.html).
+**_Céntrate en lo importante_**, tus analistas deben preocuparse de programar correctamente las reglas de negocio, y aplicar en forma adecuada la calidad de datos sobre el 100% de las columnas, de una forma sencilla y fácil de comprender por cualquier analista.
+¿Sabías que, en promedio, deberías aplicar como mínimo 3 reglas de calidad de datos por cada columna?, es decir, en una tabla con 50 columnas deberías programar más de 150 reglas de validación (son más de 1.500 líneas de código si programas cada regla en 10 líneas). y esto es solo para asegurar la validez de tus datos, eso sin contar reglas de integridad, completitud y precisión.... **y aún no has aplicado ninguna regla de transformación de negocio**
 
-There should be whitespace between paragraphs.
+Con Huemul BigDataGovernance, esas 1.500 líneas de código se reducen a 150... y además te entrega de forma automática los sigiuentes elementos del gobierno de datos:
 
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
+*   Diccionario de datos (Descripción y rutas de tablas, campos, responsables y atributos adicionales)
+*   Documentación viva de trazabilidad de la información a nivel de tablas, con posiblidad de actualizar las dependencias de campos
+*   Documentación de reglas de calidad de datos por cada campo y por cada tabla
+*   Resultado de la ejecución de DataQuality (Errores, warnings, cumplimiento de tolerancias)
+*   Trazabilidad en la ejecución de los procesos, incluido el paso a paso de cada actividad
+*   Histórico de ejecuciones por ambiente (desarrollo, experimental, productivo)
+
+
+### Modelo de Operación Basado en Buenas Prácticas de Gobierno de Datos
+
+La implementación de esta librería está basada en las buenas prácticas descritas en el DAMA-DMBOK2 ([Data Management Body Of Knowledge](www.dama.org)), y permite agilizar el desarrollo de proyectos de BigData a nivel corporativo considerando las siguientes actividades:
+
+*   Cargas de información desde ambiente RAW
+*   Validación de integridad de las interfaces RAW
+*   Implementación de reglas de transformación y reglas de negocio (HDFS + HIVE + SPARK)
+*   Reglas de DataQuality (Completitud, Consistencia, Integridad, Precision, Validez)
+*   Documentación de diccionarios de datos (tablas, campos, responsables, ubicación de archivos)
+*   Documentación de trazabilidad de la información
+*   Diseño de Planes de Prueba
+
+Muchas veces, por el tiempo que demora implementar todas estas estapas, solo se logra terminar una carga de datos simple, sin aplicar DataQuality, y mucho menos generando documentación de los procesos, poniendo en riesgo el éxito de las soluciones analíticas por problemas con calidad de datos, o complicaciones en el cumplimiento normativo por falta de documentación y trazabilidad de los datos.
+
+Nuestra librería resuelve el problema del tiempo de desarrollo, **en el mismo código se definen las estructuras de datos, se crea automáticamente un registro con los diccionarios de datos, trazabilidad de la información, reglas de data quality, planes de pruebas y criterios de negocio, TODO AL MISMO TIEMPO!**.
+
+Toda la **documentación del proyecto siempre estará actualizada**, cada vez que se ejecuta el código se actualizan los diccionarios y respositorios de trazabilidad, nunca más tendrás que preocuparte por actualizar manualmente la documentación.
+
+¿Maravilloso no?, **¿y como se hace?**
+
 
 # Define las tablas como si fueran clases!
 
