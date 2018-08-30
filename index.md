@@ -21,11 +21,11 @@ Debido al tiempo que demora implementar todas estas estapas, en la práctica sol
 La construcción de Huemul BigDataGovernance está basada en las buenas prácticas descritas en el DAMA-DMBOK2 ([Data Management Body Of Knowledge](www.dama.org)), y permite agilizar el desarrollo de proyectos de BigData a nivel corporativo.
 
 ### Simplicidad y Eficiencia
-Huemul BigDataGovernance resuelve el problema del tiempo de desarrollo, **en el mismo código se definen las estructuras de datos, se crea automáticamente el diccionarios de datos, trazabilidad de la información, reglas de data quality, planes de pruebas y criterios de negocio, TODO AL MISMO TIEMPO!**.
+Huemul BigDataGovernance resuelve el problema del tiempo de desarrollo, **en el mismo código se definen las estructuras de datos, se crea automáticamente el diccionarios de datos, trazabilidad de la información, reglas de data quality, planes de pruebas y criterios de negocio, TODO AL MISMO TIEMPO!** [(más detalles acá)](pasos_desarrollo).
 
 Toda la **documentación del proyecto siempre estará actualizada**, cada vez que se ejecuta el código en producción se actualizan los diccionarios y respositorios de trazabilidad, nunca más tendrás que preocuparte por actualizar manualmente la documentación.
 
-¿Maravilloso no?, **¿y como se hace?**
+¿Maravilloso no?, **[¿y como se hace?](pasos_desarrollo)**
 
 
 # Define las tablas como si fueran clases!
