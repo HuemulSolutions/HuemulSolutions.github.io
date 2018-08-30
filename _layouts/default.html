@@ -22,18 +22,16 @@
   <body>
     <a id="skip-to-content" href="#content">Skip to the content.</a>
 
-    <header class="page-header" style="padding:0px;font-size: 32px" role="banner">
-      <a href="ejemplos.html">Ejemplos</a>
-      <a href="codigo.html">Codigo</a>
-      <a href="labs.html">Labs</a>
-      <a href="precios.html">Gratis!</a>
+    <header class="page-header" style="padding:0px;" role="banner">
+    
       <a href="https://github.com/HuemulSolutions/Bigdata-Governance">GitHub</a>
      
-      <h1 class="project-name">{{ site.title | default: site.github.repository_name }}</h1>
-      <h2 class="project-tagline">{{ site.description | default: site.github.project_tagline }}</h2>
+      <h1 class="project-name" style="font-size: 32px">{{ site.title | default: site.github.repository_name }}</h1>
+      <h2 class="project-tagline" style="font-size: 28px">{{ site.description | default: site.github.project_tagline }}</h2>
       {% if site.show_downloads %}
-        <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
-        <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
+        <a href="codigo.html" class="btn">Codigo</a>
+        <a href="documentacion.html" class="btn">Documentación</a>
+        <a href="ejemplos.html" class="btn">Ejemplos</a>
       {% endif %}
       
     </header>
