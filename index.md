@@ -12,9 +12,10 @@ layout: default
 Con Huemul BigDataGovernance, esas 1.500 líneas de código se reducen a 150... y además te entrega de forma automática documentación de tu proyecto.
 
 ### Modelo de Operación Basado en Buenas Prácticas de Gobierno de Datos
+La implementación de todas estas etapas puede tardar más de una semana, con Huemul BigDataGovernance lo puedes hacer en unas pocas horas. Apoyados en una buena estrategia, puedes hacer que tus ambientes analíticos ahora sean productivos.
 ![Branching](huemul_ciclocompleto.png)
 
-Muchas veces, por el tiempo que demora implementar todas estas estapas, solo se logra implementar la lógica de negocio sin aplicar DataQuality, y mucho menos generando planes de pruebas y documentación de los procesos, poniendo en riesgo el éxito de las soluciones analíticas.
+Debido al tiempo que demora implementar todas estas estapas, en la práctica solo se logra trabajar en la lógica de negocio sin DataQuality, los planes de pruebas y documentación de los procesos nunca se complentan adecuadamente, esto poniendo en riesgo el éxito de las soluciones analíticas.
 
 La construcción de Huemul BigDataGovernance está basada en las buenas prácticas descritas en el DAMA-DMBOK2 ([Data Management Body Of Knowledge](www.dama.org)), y permite agilizar el desarrollo de proyectos de BigData a nivel corporativo.
 
