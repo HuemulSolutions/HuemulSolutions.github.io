@@ -6,21 +6,21 @@ layout: default
 
 **_Céntrate en lo importante_**, tus analistas deben preocuparse de programar correctamente las reglas de negocio, y aplicar en forma adecuada la calidad de datos sobre el 100% de las columnas, de una forma sencilla y fácil de comprender por cualquier analista.
 
-### Acelera los entregables en 10X, aumentando la calidad de datos a la vez!
+### Acelera los entregables en 10X y mejora la calidad de datos!
 ¿Sabías que, en promedio, deberías aplicar como mínimo 3 reglas de calidad de datos por cada columna?, es decir, en una tabla con 50 columnas deberías programar más de 150 reglas de validación (son más de 1.500 líneas de código si programas cada regla en 10 líneas). y esto es solo para asegurar la validez de tus datos, sin contar reglas de integridad, completitud y precisión.... **y aún no has aplicado ninguna regla de transformación de negocio**
 
 Con Huemul BigDataGovernance, esas 1.500 líneas de código se reducen a 150... y además te entrega de forma automática documentación de tu proyecto.
 
 ### Modelo de Operación Basado en Buenas Prácticas de Gobierno de Datos
-Muchas veces, por el tiempo que demora implementar todas estas estapas, solo se logra terminar una carga de datos simple, sin aplicar DataQuality, y mucho menos generando planes de pruebas y documentación de los procesos, poniendo en riesgo el éxito de las soluciones analíticas por problemas con calidad de datos, o complicaciones en el cumplimiento normativo por falta de documentación y trazabilidad de los datos.
+![Branching](huemul_ciclocompleto.png)
 
-![Octocat](huemul_desarrollo.png)
+Muchas veces, por el tiempo que demora implementar todas estas estapas, solo se logra implementar la lógica de negocio sin aplicar DataQuality, y mucho menos generando planes de pruebas y documentación de los procesos, poniendo en riesgo el éxito de las soluciones analíticas.
 
 La construcción de Huemul BigDataGovernance está basada en las buenas prácticas descritas en el DAMA-DMBOK2 ([Data Management Body Of Knowledge](www.dama.org)), y permite agilizar el desarrollo de proyectos de BigData a nivel corporativo.
 
 Huemul BigDataGovernance resuelve el problema del tiempo de desarrollo, **en el mismo código se definen las estructuras de datos, se crea automáticamente el diccionarios de datos, trazabilidad de la información, reglas de data quality, planes de pruebas y criterios de negocio, TODO AL MISMO TIEMPO!**.
 
-Toda la **documentación del proyecto siempre estará actualizada**, cada vez que se ejecuta el código se actualizan los diccionarios y respositorios de trazabilidad, nunca más tendrás que preocuparte por actualizar manualmente la documentación.
+Toda la **documentación del proyecto siempre estará actualizada**, cada vez que se ejecuta el código en producción se actualizan los diccionarios y respositorios de trazabilidad, nunca más tendrás que preocuparte por actualizar manualmente la documentación.
 
 ¿Maravilloso no?, **¿y como se hace?**
 
