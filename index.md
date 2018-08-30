@@ -40,9 +40,10 @@ Las rutas de almacenamiento en HDFS dentro del servidor se definen en un fichero
   }
   ```
 
-## Agrega identificación de responsables> Puedes especificar en el mismo código quiénes son los responsables de TI y de negocio, estos datos son almacenados en el catálogo de la aplicación
+## Agrega identificación de responsables
+> Puedes especificar en el mismo código quiénes son los responsables de TI y de negocio, estos datos son almacenados en el catálogo de la aplicación
 >
-> ```scala
+```scala
   class tbl_pais(HuemulLib: huemul_Library, Control: huemul_Control) extends huemul_Table(HuemulLib,Control) with     Serializable {
     this.setDescription("Tabla que contiene los datos de países para el ambiente analítico")
     
@@ -53,9 +54,9 @@ Las rutas de almacenamiento en HDFS dentro del servidor se definen en un fichero
 ## Calidad de Datos en una sola línea
 
 > Incluir reglas de validación nunca fue tan sencillo!. En una sola línea puedes especificar reglas predefinidas, como validación de largos, valores máximos, mínimos y validación de nulos. También puedes agregar validaciones de integridad de datos entre tablas. Las reglas más complejas también las puedes definir en una sola línea.
-Todas estas validaciones quedan almacenadas en el catálogo del sistema, en forma posterior puedes consultar el resultado de la ejecución.
->
-> ```scala
+>Todas estas validaciones quedan almacenadas en el catálogo del sistema, en forma posterior puedes consultar el resultado de la ejecución.
+
+```scala
   class tbl_pais(HuemulLib: huemul_Library, Control: huemul_Control) extends huemul_Table(HuemulLib,Control) with     Serializable {
     this.setDescription("Tabla que contiene los datos de países para el ambiente analítico")
     
@@ -101,7 +102,7 @@ val pais_nombre = new huemul_Columns(StringType,true,"Nombre del país. Ejemplo:
 >En las tablas maestras, puedes marcar en cada atributo qué tipo de tracking quieres hacer, puedes guardar el valor anterior, la última fecha de cambio y el proceso que hizo ese cambio
 > Esto es equivalente a implementar el SCD tipo 2 de kimball.
 
-> ```scala
+```scala
   val pais_nombre = new huemul_Columns(StringType,true,"Nombre del país. Ejemplo: chile")
     //En caso de tener modificaciones, creará en forma automática un campo llamado "pais_nombre_old" con el valor anterior
     pais_nombre.MDM_EnableOldValue = true
