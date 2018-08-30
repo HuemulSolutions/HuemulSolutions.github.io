@@ -14,7 +14,7 @@ Con Huemul BigDataGovernance, esas 1.500 líneas de código se reducen a 150... 
 ### Modelo de Operación Basado en Buenas Prácticas de Gobierno de Datos
 Muchas veces, por el tiempo que demora implementar todas estas estapas, solo se logra terminar una carga de datos simple, sin aplicar DataQuality, y mucho menos generando planes de pruebas y documentación de los procesos, poniendo en riesgo el éxito de las soluciones analíticas por problemas con calidad de datos, o complicaciones en el cumplimiento normativo por falta de documentación y trazabilidad de los datos.
 
-![Branching](huemul_desarrollo.png)
+![Octocat](huemul_desarrollo.png)
 
 La construcción de Huemul BigDataGovernance está basada en las buenas prácticas descritas en el DAMA-DMBOK2 ([Data Management Body Of Knowledge](www.dama.org)), y permite agilizar el desarrollo de proyectos de BigData a nivel corporativo.
 
