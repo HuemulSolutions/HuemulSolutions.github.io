@@ -42,7 +42,7 @@ Las rutas de almacenamiento en HDFS dentro del servidor se definen en un fichero
 
 ## Agrega identificación de responsables
 > Puedes especificar en el mismo código quiénes son los responsables de TI y de negocio, estos datos son almacenados en el catálogo de la aplicación
->
+
 ```scala
   class tbl_pais(HuemulLib: huemul_Library, Control: huemul_Control) extends huemul_Table(HuemulLib,Control) with     Serializable {
     this.setDescription("Tabla que contiene los datos de países para el ambiente analítico")
