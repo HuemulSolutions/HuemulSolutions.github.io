@@ -5,7 +5,9 @@ layout: default
 **Reduce en más de 5 veces el tiempo y esfuerzo de desarrollo de tus proyectos BigData!!!!**
 
 **_Céntrate en lo importante_**, tus analistas deben preocuparse de programar correctamente las reglas de negocio, y aplicar en forma adecuada la calidad de datos sobre el 100% de las columnas, de una forma sencilla y fácil de comprender por cualquier analista.
-¿Sabías que, en promedio, deberías aplicar como mínimo 3 reglas de calidad de datos por cada columna?, es decir, en una tabla con 50 columnas deberías programar más de 150 reglas de validación (son más de 1.500 líneas de código si programas cada regla en 10 líneas). y esto es solo para asegurar la validez de tus datos, eso sin contar reglas de integridad, completitud y precisión.... **y aún no has aplicado ninguna regla de transformación de negocio**
+
+### Acelera los entregables en 10X, aumentando la calidad de datos a la vez!
+¿Sabías que, en promedio, deberías aplicar como mínimo 3 reglas de calidad de datos por cada columna?, es decir, en una tabla con 50 columnas deberías programar más de 150 reglas de validación (son más de 1.500 líneas de código si programas cada regla en 10 líneas). y esto es solo para asegurar la validez de tus datos, sin contar reglas de integridad, completitud y precisión.... **y aún no has aplicado ninguna regla de transformación de negocio**
 
 Con Huemul BigDataGovernance, esas 1.500 líneas de código se reducen a 150... y además te entrega de forma automática los sigiuentes elementos del gobierno de datos:
 
