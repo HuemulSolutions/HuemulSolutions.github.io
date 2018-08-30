@@ -10,38 +10,110 @@ There should be whitespace between paragraphs.
 
 There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
 
-# Header 1
+# Define las tablas como si fueran clases!
 
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+La estructura de las tablas las defines como una clase en Scala, de esta forma es super fácil para cualquier miembro del equipo conocer los tipos de datos, descripción de campos y revisión de reglas de DataQuality.
+Las rutas de almacenamiento en HDFS dentro del servidor se definen en un fichero de configuración, es super simple!.
 
-## Header 2
+  ```scala
+  class tbl_pais(HuemulLib: huemul_Library, Control: huemul_Control) extends huemul_Table(HuemulLib,Control) with     Serializable {
+    this.setDescription("Tabla que contiene los datos de países para el ambiente analítico")
+    
+    this.setTableType(huemulType_Tables.Master)
+    this.setDataBase(HuemulLib.GlobalSettings.MASTER_DataBase)
+    
+    this.setGlobalPaths(HuemulLib.GlobalSettings.MASTER_BigFiles_Path)
+    this.setLocalPath("planPruebas/")
+    this.setStorageType(huemulType_StorageType.PARQUET)
+    this.setDQ_MaxNewRecords_Num(4)
 
-> This is a blockquote following a header.
+    val pais_id = new huemul_Columns(StringType,true,"Codigo internacional del país. Ejemplo: chile codigo 056")
+    pais_id.IsPK = true
+    pais_id.DQ_MinLen = 3
+    pais_id.DQ_MaxLen = 3
+
+    val pais_nombre = new huemul_Columns(StringType,true,"Nombre del país. Ejemplo: chile")
+    pais_nombre.Nullable = false
+  
+    this.ApplyTableDefinition()
+  
+  }
+  ```
+
+## Agrega identificación de responsables> Puedes especificar en el mismo código quiénes son los responsables de TI y de negocio, estos datos son almacenados en el catálogo de la aplicación
 >
-> When something is important enough, you do it even if the odds are not in your favor.
+> ```scala
+  class tbl_pais(HuemulLib: huemul_Library, Control: huemul_Control) extends huemul_Table(HuemulLib,Control) with     Serializable {
+    this.setDescription("Tabla que contiene los datos de países para el ambiente analítico")
+    
+    ...
+  ```
 
-### Header 3
 
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
+## Calidad de Datos en una sola línea
+
+> Incluir reglas de validación nunca fue tan sencillo!. En una sola línea puedes especificar reglas predefinidas, como validación de largos, valores máximos, mínimos y validación de nulos. También puedes agregar validaciones de integridad de datos entre tablas. Las reglas más complejas también las puedes definir en una sola línea.
+Todas estas validaciones quedan almacenadas en el catálogo del sistema, en forma posterior puedes consultar el resultado de la ejecución.
+>
+> ```scala
+  class tbl_pais(HuemulLib: huemul_Library, Control: huemul_Control) extends huemul_Table(HuemulLib,Control) with     Serializable {
+    this.setDescription("Tabla que contiene los datos de países para el ambiente analítico")
+    
+    ...
+  ```
+
+
+### DQ: Reglas de Validez de datos
+
+> Asegurar que los datos se estén cargando con las especificaciones correctas es fundamental para el uso de esta información, aplicar estas reglas est muy sencillo, solo debes agregar una línea de código!.
+```scala
+//Define campo pais_id
+val pais_id = new huemul_Columns(StringType,true,"Codigo internacional del país. Ejemplo: chile codigo 056")
+    //Largo del campo debe ser siempre 3, por tanto definimos largo máximo y mínimo como 3
+    pais_id.DQ_MinLen = 3
+    pais_id.DQ_MaxLen = 3
+    
+    //Además, definimos que el campo no puede tener valores nulos
+    pais_id.Nullable = false
 ```
+> Listo!, con 3 simples líneas de código estamos asegurando la validez de nuestros datos.
 
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
+### DQ: Integridad de Datos y Valores Únicos
+
+> Puedes especificar que los valores en tu tabla sean únicos, ya sea identificando una Primary Key, o indicando en cada campo si el valor es único o no.
+```scala
+//Define campo pais_id
+val pais_id = new huemul_Columns(StringType,true,"Codigo internacional del país. Ejemplo: chile codigo 056")
+    //el campo pais_id es la clave primaria de la tabla tbl_pais.
+    pais_id.IsPK = true
+    
+val pais_nombre = new huemul_Columns(StringType,true,"Nombre del país. Ejemplo: chile")
+    //adicionalmente, podemos identificar el campo pais_nombre como único, es decir, no se pueden repetir los valores en la tabla
+    pais_nombre.IsUnique = true
+   
 ```
+> Listo!, integridad de datos aplicada.
 
-#### Header 4
 
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
+## Tracking de cambios de datos en tablas maestras
+
+> Siempre es complejo agregar control de cambios a las tablas, por eso hemos incluido funciones especiales para hacer esta tarea algo sencillo.
+>En las tablas maestras, puedes marcar en cada atributo qué tipo de tracking quieres hacer, puedes guardar el valor anterior, la última fecha de cambio y el proceso que hizo ese cambio
+> Esto es equivalente a implementar el SCD tipo 2 de kimball.
+
+> ```scala
+  val pais_nombre = new huemul_Columns(StringType,true,"Nombre del país. Ejemplo: chile")
+    //En caso de tener modificaciones, creará en forma automática un campo llamado "pais_nombre_old" con el valor anterior
+    pais_nombre.MDM_EnableOldValue = true
+    //En caso de tener cambios, guardará la fecha/hora de modificación en el campo "pais_nombre_fhChange"
+    pais_nombre.MDM_EnableDTLog = true
+    //En caso de tener cambios, guardará el proceso que hizo el cambio en el campo "pais_nombre_ProcessLog"
+    pais_nombre.MDM_EnableProcessLog = true
+    
+    ...
+  ```
+
+
 
 ##### Header 5
 
