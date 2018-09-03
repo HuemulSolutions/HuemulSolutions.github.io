@@ -82,7 +82,10 @@ class raw_[[entidad]]_[[per]](huemulBigDataGov: huemul_BigDataGovernance, Contro
       control.NewStep("Aplicando Filtro (3 primeros caracteres de cada línea deben ser numéricos)")
       //Si el archivo no tiene cabecera, comentar la línea de .filter
       val rowRDD = this.DataRDD
+            //filtro para considerar solo las filas que los tres primeros caracteres son numéricos
             .filter { x => x.length()>=4 && huemulBigDataGov.isAllDigits(x.substring(0, 3) )  }
+            //filtro para dejar fuera la primera fila
+            //.filter { x => x != this.Log.DataFirstRow  }
             .map { x => this.ConvertSchema(x) }
             
       control.NewStep("Transformando datos a dataframe")      
