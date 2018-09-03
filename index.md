@@ -40,7 +40,7 @@ Debido al tiempo que demora implementar todas estas estapas, en la práctica sol
 La construcción de Huemul BigDataGovernance está basada en las buenas prácticas descritas en el DAMA-DMBOK2 ([Data Management Body Of Knowledge](www.dama.org)), y permite agilizar el desarrollo de proyectos de BigData a nivel corporativo.
 
 ### Metodología Flexible
-El uso de la librería te permite desarrollar en forma flexible tus proyectos de BigData. Trabajar directamente sobre los datos en bruto es una buena opción si tienes un proyecto puntual sobre una interfaz en particular, las transformaciones y validaciones que hagan no serán utilizadas por el resto de la organización. Si quieres juntar muchos datos desde distintas fuentes, la mejor estrategia será generar una base consolidada, donde el DataQuality sea implementado una sola vez, y toda la organización pueda acceder a los datos a validados. 
+El uso de la librería permite desarrollar en forma flexible tus proyectos de BigData. Trabajar directamente sobre los datos en bruto es una buena opción si tienes un proyecto puntual sobre una interfaz en particular, las transformaciones y validaciones que hagan no serán utilizadas por el resto de la organización (desde "A" hasta "D"). Si quieres juntar muchos datos desde distintas fuentes, la mejor estrategia será generar una base consolidada, donde el DataQuality sea implementado una sola vez, y toda la organización pueda acceder a los datos a validados. 
 
 Nuestra metodología permite implementar ambas estrategias a la vez
 
