@@ -1,16 +1,19 @@
 ---
 layout: default
 ---
-**Implementa una Estrategia de Dato Unico a nivel Corporativo**
-**Reduce en más de 5 veces el tiempo y esfuerzo de desarrollo de tus proyectos BigData!!!!**
-
-**Huemul BigDataGovernance**, es una librería que trabaja sobre Spark, Hive y HDFS que permite la implementación de una estrategia corporativa de dato único, basada en buenas prácticas de Gobierno de Datos.
+**Huemul BigDataGovernance**, es una librería que trabaja sobre Spark, Hive y HDFS que permite la implementación de una **estrategia corporativa de dato único**, basada en buenas prácticas de Gobierno de Datos.
 
 ### ¿Cómo Funciona?
-El diseño de Huemul BigDataGovernance está pensado en optimizar el tiempo de desarrollo de los analistas de datos, a través de una metodología sólida ayuda a centrar los esfuerzos de tu equipo en la definición de las interfaces de entrada, la definición de las tablas masterizadas y la construcción de los procesos de masterización.
+El diseño de Huemul BigDataGovernance está pensado en optimizar el tiempo de desarrollo de los analistas de datos. Utilizando una metodología sólida permitimos que los ingenieros de tu equipo centren sus esfuerzos en la definición de las interfaces de entrada, la definición de las tablas masterizadas y la construcción de los procesos de masterización robustos.
 
 ![Branching](huemul_pasos.png)
 
+Hay dos formas de generar el código de cada paso:
+
+1.  La primera forma es generar el código desde cero utilizando los [template que están disponibles acá](template_codigo).
+2.  En la segunda forma solo debes crear la definición de tu interfaz de entrada utilizando este [template sencillo](template_codigo), y luego puedes generar el código de tu tabla y el código de masterización en forma automática!. En el código de la tabla se implementa en forma automática validaciones de calidad de datos, y te permite agregar fácilmente otras validaciones más complejas.
+
+![Branching](huemul_flujo_genera_codigo.png)
 
 ### Acelera los desarrollos en 5X y mejora la calidad de datos!
 ¿Sabías que, en promedio, deberías aplicar como mínimo 3 reglas de calidad de datos por cada columna?, es decir, en una tabla con 10 columnas deberías programar más de 30 reglas de validación (son más de 300 líneas de código si programas cada regla en 10 líneas). y esto es solo para asegurar la validez de tus datos, sin contar reglas de integridad, completitud y precisión.... **y aún no has aplicado ninguna regla de transformación de negocio**
