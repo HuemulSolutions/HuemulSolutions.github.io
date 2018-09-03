@@ -79,7 +79,7 @@ class raw_[[entidad]]_[[per]](huemulBigDataGov: huemul_BigDataGovernance, Contro
         control.RaiseError(s"Error al abrir archivo: ${this.Error.ControlError_Message}")
       }
    
-      control.NewStep("Aplicando Filtro (3 primeros caracteres de cada línea deben ser numéricos)")
+      control.NewStep("Aplicando Filtro")
       //Si el archivo no tiene cabecera, comentar la línea de .filter
       val rowRDD = this.DataRDD
             //filtro para considerar solo las filas que los tres primeros caracteres son numéricos
