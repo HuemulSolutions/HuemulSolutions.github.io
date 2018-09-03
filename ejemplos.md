@@ -115,7 +115,7 @@ class raw_[[entidad]]_[[per]](huemulBigDataGov: huemul_BigDataGovernance, Contro
  * Este objeto se utiliza solo para probar la lectura del archivo RAW
  * La clase que está definida más abajo se utiliza para la lectura.
  */
-object raw_institucion_mes_test {
+object raw_[[entidad]]_[[per]]_test {
    /**
    * El proceso main es invocado cuando se ejecuta este código
    * Permite probar la configuración del archivo RAW
@@ -133,7 +133,7 @@ object raw_institucion_mes_test {
     var param_mes = huemulBigDataGov.arguments.GetValue("mes", null, "Debe especificar el parámetro mes, ej: mes=12").toInt
     
     //Inicializa clase RAW  
-    val DF_RAW =  new raw_institucion_mes(huemulBigDataGov, Control)
+    val DF_RAW =  new raw_[[entidad]]_[[per]](huemulBigDataGov, Control)
     if (!DF_RAW.open("DF_RAW", null, param_ano, param_mes, 0, 0, 0, 0)) {
       println("************************************************************")
       println("**********  E  R R O R   E N   P R O C E S O   *************")
