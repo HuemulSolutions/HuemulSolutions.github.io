@@ -1,15 +1,28 @@
 ---
 layout: default
 ---
-
+**Implementa una Estrategia de Dato Unico a nivel Corporativo**
 **Reduce en más de 5 veces el tiempo y esfuerzo de desarrollo de tus proyectos BigData!!!!**
 
-**_Céntrate en lo importante_**, tus analistas deben preocuparse de programar correctamente las reglas de negocio, y aplicar en forma adecuada la calidad de datos sobre el 100% de las columnas, de una forma sencilla y fácil de comprender por cualquier analista.
+**Huemul BigDataGovernance**, es una librería que trabaja sobre Spark, Hive y HDFS que permite la implementación de una estrategia corporativa de dato único, basada en buenas prácticas de Gobierno de Datos.
+
+### ¿Cómo Funciona?
+El diseño de Huemul BigDataGovernance está pensado en optimizar el tiempo de desarrollo de los analistas de datos, a través de una metodología sólida ayuda a centrar los esfuerzos de tu equipo en la definición de las interfaces de entrada, la definición de las tablas masterizadas y la construcción de los procesos de masterización.
+
+![Branching](huemul_pasos.png)
+
 
 ### Acelera los desarrollos en 5X y mejora la calidad de datos!
-¿Sabías que, en promedio, deberías aplicar como mínimo 3 reglas de calidad de datos por cada columna?, es decir, en una tabla con 50 columnas deberías programar más de 150 reglas de validación (son más de 1.500 líneas de código si programas cada regla en 10 líneas). y esto es solo para asegurar la validez de tus datos, sin contar reglas de integridad, completitud y precisión.... **y aún no has aplicado ninguna regla de transformación de negocio**
+¿Sabías que, en promedio, deberías aplicar como mínimo 3 reglas de calidad de datos por cada columna?, es decir, en una tabla con 10 columnas deberías programar más de 30 reglas de validación (son más de 300 líneas de código si programas cada regla en 10 líneas). y esto es solo para asegurar la validez de tus datos, sin contar reglas de integridad, completitud y precisión.... **y aún no has aplicado ninguna regla de transformación de negocio**
 
-Con Huemul BigDataGovernance, esas 1.500 líneas de código se reducen a 150... y además te entrega de forma automática documentación de tu proyecto.
+Con Huemul BigDataGovernance, esas 300 líneas de código se reducen a 30 (1 línea por cada validación)... y además te entrega de forma automática documentación de tu proyecto.
+
+### Simplicidad y Eficiencia
+Huemul BigDataGovernance permite reducir en forma importante el tiempo de desarrollo de tus proyectos BigData, aumentando la calidad de los datos, **en el mismo código se definen las estructuras de datos, se crea automáticamente el diccionarios de datos, trazabilidad de la información, reglas de data quality, planes de pruebas y criterios de negocio, TODO AL MISMO TIEMPO!** 
+
+Toda la **documentación del proyecto siempre estará actualizada**, cada vez que se ejecuta el código en producción se actualizan los diccionarios y respositorios de trazabilidad, nunca más tendrás que preocuparte por actualizar manualmente la documentación.
+
+
 
 ### Modelo de Operación Basado en Buenas Prácticas de Gobierno de Datos
 La implementación de todas estas etapas puede tardar más de una semana, con Huemul BigDataGovernance lo puedes hacer en unas pocas horas. 
@@ -20,10 +33,7 @@ Debido al tiempo que demora implementar todas estas estapas, en la práctica sol
 
 La construcción de Huemul BigDataGovernance está basada en las buenas prácticas descritas en el DAMA-DMBOK2 ([Data Management Body Of Knowledge](www.dama.org)), y permite agilizar el desarrollo de proyectos de BigData a nivel corporativo.
 
-### Simplicidad y Eficiencia
-Huemul BigDataGovernance resuelve el problema del tiempo de desarrollo, **en el mismo código se definen las estructuras de datos, se crea automáticamente el diccionarios de datos, trazabilidad de la información, reglas de data quality, planes de pruebas y criterios de negocio, TODO AL MISMO TIEMPO!** [(más detalles acá)](pasos_desarrollo).
 
-Toda la **documentación del proyecto siempre estará actualizada**, cada vez que se ejecuta el código en producción se actualizan los diccionarios y respositorios de trazabilidad, nunca más tendrás que preocuparte por actualizar manualmente la documentación.
 
 ¿Maravilloso no?, **[¿y como se hace?](pasos_desarrollo)**
 
