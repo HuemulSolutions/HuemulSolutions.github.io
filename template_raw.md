@@ -7,12 +7,13 @@ Los pasos para usar este template se detallan a continuación:
 2.   Pegar el siguiente código en el nuevo objeto creado.
 3.   Reemplazar todo el texto que está entre corchetes
 
-[[com.yourcompany]]: Nombre de tu organización
-[[yourapplication]]: Nombre de tu aplicativo (ejemplo: sbif) 
-[[entidad]]: nombre de la interfaz en particular (ejemplo: planCuentas)
-[[per]]: periodicidad de actualización de la interfaz (mes, dia). Si los datos no tiene periodicidad, borrar este parámetro
-[[name{{yyyy}}{{mm}}{{dd}}.TXT]]: Nombre físico de la interfaz
-[[nombre de contacto del origen]]: Nombre de la persona responsable de la interfaz
+El significado de los comodines de reemplazo es el siguiente:
+* [[com.yourcompany]]: Nombre de tu organización
+* [[yourapplication]]: Nombre de tu aplicativo (ejemplo: sbif) 
+* [[entidad]]: nombre de la interfaz en particular (ejemplo: planCuentas)
+* [[per]]: periodicidad de actualización de la interfaz (mes, dia). Si los datos no tiene periodicidad, borrar este parámetro
+* [[name{{yyyy}}{{mm}}{{dd}}.TXT]]: Nombre físico de la interfaz
+* [[nombre de contacto del origen]]: Nombre de la persona responsable de la interfaz
 
 ```scala
 package [[com.yourcompany]].[[yourapplication]].datalake
