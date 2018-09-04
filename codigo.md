@@ -115,6 +115,8 @@ class tbl_sbif_planCuenta(huemulBigDataGov: huemul_BigDataGovernance, Control: h
   planCuenta_Nombre.setMDM_EnableProcessLog(true)  
   
  ...
+ ```
+ 
 ## Código de Ejemplo Tablas Transaccionales
 El código completo de ejemplo para una tabla de tipo transaccional es el siguiente:
 
