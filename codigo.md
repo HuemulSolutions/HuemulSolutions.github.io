@@ -4,7 +4,7 @@ layout: default
 
 # Define las tablas como si fueran clases!
 
-La estructura de las tablas las defines como una clase en Scala, de esta forma es super fácil para cualquier miembro del equipo conocer los tipos de datos, descripción de campos y revisión de reglas de DataQuality.
+El nombre de la clase es el nombre de la tabla y el nombre del fichero parquet en HDFS. La estructura de las tablas las defines como una clase en Scala, de esta forma es super fácil para cualquier miembro del equipo conocer los tipos de datos, descripción de campos y revisión de reglas de DataQuality.
 Las rutas de almacenamiento en HDFS dentro del servidor se definen en un fichero de configuración, es super simple!.
 
   ```scala
