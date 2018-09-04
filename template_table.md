@@ -58,7 +58,7 @@ class tbl_[[yourapplication]]_[[entidad]]_[[per]](huemulBigDataGov: huemul_BigDa
     
   /**********   S E G U R I D A D   ****************************************/
   //Solo estos package y clases pueden ejecutar en modo full, si no se especifica todos pueden invocar
-  this.WhoCanRun_executeFull_addAccess("process_eerr_mes", "com.yourcompany.sbif")
+  this.WhoCanRun_executeFull_addAccess("process_[[entidad]]_[[per]]", "[[com.yourcompany]].[[yourapplication]]")
   //Solo estos package y clases pueden ejecutar en modo solo Insert, si no se especifica todos pueden invocar
   //this.WhoCanRun_executeOnlyInsert_addAccess("[[MyclassName]]", "[[my.package.path]]")
   //Solo estos package y clases pueden ejecutar en modo solo Update, si no se especifica todos pueden invocar
