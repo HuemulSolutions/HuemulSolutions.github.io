@@ -46,3 +46,8 @@ En esta sección hemos incluido una clase que permite generar en forma automáti
 
 ### pom.xml
 El [pom](https://maven.apache.org/pom.html) (Project Object Model) es un archivo de configuración utilizado por [Maven](https://maven.apache.org/) para descargar en forma automática todas las librerías que serán utilizadas por tu solución, también se configura la forma de instalar y hacer deploy de tu solución. El código de ejemplo lo puedes encontrar en la sección de template.
+
+## Entendiendo el flujo de los datos
+Te recomendamos que antes de comenzar a codificar, hagas un diseño de las tablas que crearás a partir de tus interfaces de entrada, esto te permitirá avanzar de forma más organizada en el desarrollo de tu proyecto. La siguiente imagen muestra un ejemplo del diseño de nuestro proyecto de ejemplo.
+
+![Branching](huemul_Ejemplo_sbif.png)
