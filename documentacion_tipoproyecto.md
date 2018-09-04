@@ -4,9 +4,11 @@ layout: default
 
 # Estructura del Proyecto
 
-La estructura una solución utilizado Huemul BigDataGovernance es muy similar al desarrollo de proyectos de Almacenes de Datos.
+La estructura una solución utilizado Huemul BigDataGovernance es muy similar al desarrollo de proyectos de Almacenes de Datos, el objetivo es que la adaptación para analistas expertos en ambientes tradicionales sea lo más rápida posible. En la siguiente imagen se muestra un ejemplo de la estructura de un proyecto tipo.
 
-Si bien es cierto puedes utilizar la estructura que más te acomode, recomendamos usar el siguiente layout:
+![Branching](huemul_codigo_sbif_ejemplo.png)
+
+Si bien es cierto puedes utilizar la estructura que más te acomode, recomendamos usar este layout. La explicación de cada elemento se detalla a continuación.
 
 ## Packages:
 Los packages son una forma de ordenar el código en tu solución, es el path que en forma posterior se utilizará para la ejecución de los procesos en Spark. La estructura es la siguiente:
