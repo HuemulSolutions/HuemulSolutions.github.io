@@ -8,7 +8,7 @@ La estructura una solución utilizado Huemul BigDataGovernance es muy similar al
 
 Si bien es cierto puedes utilizar la estructura que más te acomode, recomendamos usar el siguiente layout:
 
-##Packages:
+## Packages:
 Los packages son una forma de ordenar el código en tu solución, es el path que en forma posterior se utilizará para la ejecución de los procesos en Spark. La estructura es la siguiente:
 
 * **com.yourcompany.yourapplication**: Se utiliza para guardar los códigos de lógica de negocio. En ambientes de Base de Datos tradicionales sería el equivalente a los procedimientos almacenados.
@@ -23,7 +23,7 @@ La estructura de package descrita anteriomente aplica para proyectos de masteriz
 * com.yourcompany.tables.dimensional: Tablas del ambiente Dimensional.
 * com.yourcompany.tables.sandbox: Tablas del ambiente SandBox de usuarios.
 
-##Nomenclatura de Objetos:
+## Nomenclatura de Objetos:
 Para mantener el orden del proyecto y la fácil comprensión de cualquier integrante del equipo, sugerimos usar la siguiente nomenclatura en la creación de los objetos:
 
 * **Tablas**: tbl_[[yourapplication]]_[[entidad]]_[[per]]: tbl es el prefijo de cualquier tabla, [[yourapplication]] es la identificación del proyecto o sistema que estás trabajando, [[entidad]] es el nombre de la interfaz puntual que estás almacenando, y [[per]] es la periodicidad de los datos (mensual, diaria, semana, etc).
