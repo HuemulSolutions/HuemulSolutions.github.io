@@ -118,7 +118,7 @@ class tbl_sbif_planCuenta(huemulBigDataGov: huemul_BigDataGovernance, Control: h
  ```
  
 ## Código de Ejemplo Tablas Transaccionales
-El código completo de ejemplo para una tabla de tipo transaccional es el siguiente:
+La mayor parte de este código fue generado en forma automática por el generador de código de la librería. El código completo de ejemplo para una tabla de tipo transaccional es el siguiente:
 
  ```scala
   class tbl_sbif_eerr_mes(huemulBigDataGov: huemul_BigDataGovernance, Control: huemul_Control) extends huemul_Table(huemulBigDataGov, Control) with Serializable {
@@ -196,11 +196,57 @@ El código completo de ejemplo para una tabla de tipo transaccional es el siguie
   eerr_Monto_tdcb.setARCO_Data(false)  
   eerr_Monto_tdcb.setSecurityLevel(huemulType_SecurityLevel.Public)  
   
+  
+
+  //**********Atributos adicionales de DataQuality
+  //yourColumn.setIsPK(true) //valor por default en cada campo es false
+  //yourColumn.setIsUnique(true) //valor por default en cada campo es false
+  //yourColumn.setNullable(true) //valor por default en cada campo es false
+  //yourColumn.setIsUnique(true) //valor por default en cada campo es false
+  //yourColumn.setDQ_MinDecimalValue(Decimal.apply(0))
+  //yourColumn.setDQ_MaxDecimalValue(Decimal.apply(200.0))
+  //yourColumn.setDQ_MinDateTimeValue("2018-01-01")
+  //yourColumn.setDQ_MaxDateTimeValue("2018-12-31")
+  //yourColumn.setDQ_MinLen(5)
+  //yourColumn.setDQ_MaxLen(100)
+  //**********Otros atributos
+  //yourColumn.setDefaultValue("'string'") // "10" // "'2018-01-01'"
+  //yourColumn.setEncryptedType("tipo")
+    
+  //**********Ejemplo para aplicar DataQuality de Integridad Referencial
+  val itbl_comun_institucion_mes = new tbl_comun_institucion_mes(huemulBigDataGov,Control)
+  val fk_tbl_comun_institucion_mes = new huemul_Table_Relationship(itbl_comun_institucion_mes, false)
+  fk_tbl_comun_institucion_mes.AddRelationship(itbl_comun_institucion_mes.ins_id, ins_id)
+  fk_tbl_comun_institucion_mes.AddRelationship(itbl_comun_institucion_mes.periodo_mes, periodo_mes)
+  
+  val itbl_sbif_planCuenta_mes = new tbl_sbif_planCuenta_mes(huemulBigDataGov,Control)
+  val fk_tbl_sbif_planCuenta_mes = new huemul_Table_Relationship(itbl_sbif_planCuenta_mes, false)
+  fk_tbl_sbif_planCuenta_mes.AddRelationship(itbl_sbif_planCuenta_mes.planCuenta_id, planCuenta_id)
+  fk_tbl_sbif_planCuenta_mes.AddRelationship(itbl_sbif_planCuenta_mes.periodo_mes, periodo_mes)
+    
+  //**********Ejemplo para agregar reglas de DataQuality Avanzadas  -->ColumnXX puede ser null si la validacion es a nivel de tabla
+  //**************Parametros
+  //********************  ColumnXXColumna a la cual se aplica la validacion, si es a nivel de tabla poner null
+  //********************  Descripcion de la validacion, ejemplo: "Consistencia: Campo1 debe ser mayor que campo 2"
+  //********************  Formula SQL En Positivo, ejemplo1: campo1 > campo2  ;ejemplo2: sum(campo1) > sum(campo2)  
+  //********************  CodigoError: Puedes especificar un codigo para la captura posterior de errores, es un numero entre 1 y 999
+  //********************  QueryLevel es opcional, por default es "row" y se aplica al ejemplo1 de la formula, para el ejmplo2 se debe indicar "Aggregate"
+  //********************  Notification es opcional, por default es "error", y ante la aparicion del error el programa falla, si lo cambias a "warning" y la validacion falla, el programa sigue y solo sera notificado
+  //val DQ_NombreRegla: huemul_DataQuality = new huemul_DataQuality(ColumnXX,"Descripcion de la validacion", "Campo_1 > Campo_2",1)
+  //**************Adicionalmeente, puedes agregar "tolerancia" a la validacion, es decir, puedes especiicar 
+  //************** numFilas = 10 para permitir 10 errores (al 11 se cae)
+  //************** porcentaje = 0.2 para permitir una tolerancia del 20% de errores
+  //************** ambos parametros son independientes (condicion o), cualquiera de las dos tolerancias que no se cumpla se gatilla el error o warning
+  //DQ_NombreRegla.setTolerance(numfilas, porcentaje)
+    
+  this.ApplyTableDefinition()
+}
+
 
   ```
 
 ## Codigo de Ejemplo Tablas Maestras
-El código de ejemplo completo para una tabla maestra es el siguiente:
+La mayor parte de este código fue generado en forma automática por el generador de código de la librería. El código de ejemplo completo para una tabla maestra es el siguiente:
 
  ```scala
 class tbl_sbif_planCuenta(huemulBigDataGov: huemul_BigDataGovernance, Control: huemul_Control) extends huemul_Table(huemulBigDataGov, Control) with Serializable {
