@@ -24,11 +24,14 @@
 
     <header class="page-header" style="padding:0px;" role="banner">
       
-      <div style="position: relative;width: 100%;max-width: 1024px;margin: 0 auto;padding: 0 15px;">
+      <div style="position: relative;width: 100%;max-width: 1024px;margin: 0 auto;padding: 0 15px;backgroud:white">
         <div style="float:left">
           <img src="/Huemul_Logo_v3.png">
         </div>
+      </div>
 
+      <h2 class="project-tagline" style="font-size: 28px">{{ site.description | default: site.github.project_tagline }}</h2>
+      
         {% if site.show_downloads %}
           <a href="codigo.html" class="btn">Codigo</a>
           <a href="documentacion.html" class="btn">Documentación</a>
@@ -36,10 +39,10 @@
           <a href="https://github.com/HuemulSolutions/Bigdata-Governance" class="btn">GitHub</a>
         {% endif %}
       
-      </div>
+     
       
       <h1 class="project-name" style="font-size: 32px">{{ site.title | default: site.github.repository_name }}</h1>
-      <h2 class="project-tagline" style="font-size: 28px">{{ site.description | default: site.github.project_tagline }}</h2>
+      
       
       
     </header>
