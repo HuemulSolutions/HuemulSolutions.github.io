@@ -1,0 +1,267 @@
+<!doctype html>
+<html>
+    <head>    
+        
+        <title>Adiós Datamart. Bienvenidos SandBox ;-) - Huemul Solutions</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="google" content="notranslate" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,700i" rel="stylesheet">
+        <link rel="stylesheet" href="/assets/css/main.css">
+        
+    </head>
+    <body>
+        
+        <div id="page" class="site palette-blue">
+  <header id="masthead" class="site-header outer">
+  <div class="inner">
+    <div class="site-header-inside">
+
+      <div class="site-branding">
+        
+        
+        <p class="site-logo">
+          <a href='/'>
+            <img src="/images/logo.png" alt="Logo" />
+          </a>
+        </p><!-- .site-logo -->
+        
+        
+        <p class="site-title"><a href='/'>Huemul Solutions</a></p>
+        
+      </div><!-- .site-branding -->
+
+      
+      <nav id="main-navigation" class="site-navigation" aria-label="Main Navigation">
+        <div class="site-nav-inside">
+          <button id="menu-close" class="menu-toggle"><span class="screen-reader-text">Open Menu</span><span
+              class="icon-close" aria-hidden="true"></span></button>
+          <ul class="menu">
+            
+            <li class="menu-item ">
+              <a href="/">Home</a>
+            </li>
+            
+            
+            
+          </ul><!-- .menu -->
+        </div><!-- .site-nav-inside -->
+      </nav><!-- .site-navigation -->
+      <button id="menu-open" class="menu-toggle"><span class="screen-reader-text">Close Menu</span><span class="icon-menu"
+          aria-hidden="true"></span></button>
+      
+
+    </div><!-- .site-header-inside -->
+  </div><!-- .inner -->
+</header><!-- .site-header -->
+
+  <main id="content" class="site-content">
+    <div class="outer">
+  <div class="inner-medium">
+
+    <article class="post post-full">
+      <header class="post-header">
+        <h1 class="post-title">Adiós Datamart. Bienvenidos SandBox ;-)</h1>
+      </header><!-- .post-header -->
+      
+      
+      <div class="post-thumbnail">
+        <img src="/images/huemul_metodologia.png" alt="Adiós Datamart. Bienvenidos SandBox ;-)" />
+      </div><!-- .post-thumbnail -->
+      
+      
+      
+      <div class="post-subtitle">
+        Huemul y la evolución de los datos.
+      </div><!-- .post-subtitle -->
+      
+      <div class="post-content">
+        <p>Los datamart nos ayudaron a impulsar procesos analíticos en los últimos 15 años, antes de estos ambientes habían planillas excel con complejas fórmulas, y con suerte procesos en MS Access semi automáticos. La creación de soluciones departamentales sin lugar a dudas fueron un avance significativo. Sin embargo las áreas donde los Datamarts han alcanzado cierto nivel de madurez se ven estancados, limitados en su crecimiento, y con alta complejidad en su uso y administración, debido principalmente a la capacidad de procesamiento, almacenamiento, y que el alcance de los datos está limitado, complementar la información con otras fuentes internas es todo un desafío.</p>
+
+<p>Los datamart solo tienen información departamental, y para acceder a datos que residen en otros datamart se generan complejas telarañas de ir y venir de interfaces, copiar y replicar datos, lo que incrementa el riesgo de tener información desactualizada y repetida. ¿se actualizó el dato de MIS y no actualizamos el proceso en nuestro datamart comercial?… problema habitual, ¿les suena conocido?….</p>
+
+<p><img src="/images/huemul_datamart_relacion.png" alt="Branching" /></p>
+
+<p>Un ejemplo concreto es la industria financiera, en ella existen por lo menos 3 datamart, uno de finanzas, otro de riesgos y un tercero comercial, podríamos decir que en promedio estos tres ambientes poseen cerca del 80% de información repetida, y solo un 20% de información “propia”. Por ejemplo el datamart de finanzas calcula las rentabilidades a partir de la <strong>actividad de los clientes</strong> y sus costos, el datamart de riesgos calcula las perdidas esperadas y modelos de provisiones a partir de la información de <strong>actividad de los clientes</strong>, y adivinen como el área comercial genera campañas… si, a partir la <strong>actividad de los clientes</strong>.</p>
+
+<h2 id="los-tiempos-cambian">Los tiempos cambian…</h2>
+
+<p>Hace 15 años era complejo generar una estrategia de dato único y consolidar la información de actividad de los clientes, desde una perspectiva tecnológica las pocas herramientas que lo permitían era extremadamente costosas. Desde una perspectiva de cambio cultural el desafío era aún mayor, cada área estaba acostumbrada a manejar su propio computador bajo el escritorio y ejecutar sus macros en “access” o “excel”, por tanto crear un Datamart con una base de datos más robustas era una solución intermedia que estaba al alcance de la mayoría de las organizaciones.</p>
+
+<p>Sin embargo hoy el escenario es diametralmente distinto, existen múltiples herramientas open-source que pueden ser implementadas en infraestructura on-premise o en la nube, que permiten procesar un volumen enorme de datos a un costo razonable, y las áreas de negocio tienen experiencia trabajando con datos y soluciones analíticas. <strong>El siguiente paso es generar eficiencias en los procesos, llevando ese 80% de datos comunes en un ambiente corporativo</strong>, y que todos tengan un mismo dato validado. Con esto las áreas de negocio podrán trabajen en forma colaborativa usando sus SandBox.</p>
+
+<h2 id="el-análisis">El Análisis.</h2>
+
+<p>Entonces, ¿cual es la diferencia entre un SandBox y un Datamart?, mientras un Datamart es departamental y contiene los datos del negocio duplicados en otros Datamart, <strong>el SandBox es un ambiente donde se crean las lógicas de negocio de cada área, y todos los datos necesarios para ejecutar estas lógicas de negocio están en un ambiente compartido y productivo</strong>, pudiendo ser estos ambientes un “DataLake” con datos en bruto, un ambiente “master” donde hay datos limpios y validados, un ambiente “Dimensional” donde está la versión única del dato (golden record), o un ambiente “analítico” donde está el resultante de la ejecución de distintos modelos. Dependiendo del caso de uso, los datos se pueden obtener desde distintos lugares, esto permite entregar mayor flexibilidad a los analistas de las áreas de negocio, y asegura que los datos utilizados por toda la organización son los mismos. En el ejemplo anterior de la industria financiera, la carga de datos de la “actividad de los clientes” se hace una sola vez en el ambiente “Master”, y desde ahí MIS puede usar su SandBox particular para calcular las rentabilidades, el área de riesgos usa su SandBox particular para calcular los modelos de provisiones y el área comercial usa su Sandbox particular para calcular las ofertas comerciales.</p>
+
+<p>La siguiente figura muestra un framework flexible que establece la relación entre estos ambientes, y dependiendo del caso de uso se pueden usar datos directamente desde el DataLake (Time to Market rápido, sin transformaciones, sin datos validados) o desde un ambiente dimensional (Time to Market más lento, datos transformados, datos validados). El usuario es el que elige como usar los datos en función de las políticas corporativas definidas.</p>
+
+<p><img src="/images/huemul_metodologia.png" alt="Branching" /></p>
+
+<h2 id="características">Características</h2>
+<p>Este modelo tiene las siguientes características</p>
+
+<ul>
+  <li><strong>Eficiencia</strong>: antes hablamos que cerca del 80% de la información en los datamart está repetida, esto significa que la carga de nuevos datos comunes, o las correcciones y ajustes de los datos que ya están en producción se hará solo 1 vez, y será visible para toda la organización.</li>
+  <li><strong>Control de accesos</strong>: se controla el acceso a datos sensibles en un solo ambiente, las áreas de perfilado no tendrán que ingresar a 4 o 5 ambientes distintos.</li>
+  <li><strong>Consistencia</strong>: al estar todos los datos base disponibles en un solo ambiente, se asegura que la misma versión del dato es la que toda la organización utiliza para desarrollar sus procesos de negocio.</li>
+  <li><strong>Control</strong>: Los ambientes comunes son productivos, eso quiere decir que las áreas de TI son las encargadas de asegurar la disponibilidad de los datos comunes, y las áreas negocio los consumen sin preocuparse de su ejecución.</li>
+  <li><strong>Flexibilidad</strong>: los SandBox son ambientes administrados por las áreas de negocio, donde pueden hacer experimentos, análisis, investigación, modelos y procesos usando los datos comunes, sin depender de otras áreas.</li>
+</ul>
+
+<h2 id="resumen">Resumen</h2>
+<p>La era de los datamarts está llegando a su fin, sin lugar a dudas fueron una tremenda solución que permitió el desarrollo de muchas áreas analíticas, y simplificaron la ejecución de procesos departamentales, a la vez entregaron autonomía a las áreas de negocio y liberaron de tensión a las áreas de TI. Es hora de una merecida jubilación!.</p>
+
+<p>Ahora que las áreas de datos y analíticas tienen más experiencia y una mayor madurez, exigen un nuevo nivel de colaboración, y las tecnologías actuales son habilitantes para que esta colaboración ocurra. Utilizar un framework dinámico permite generar mayores eficiencias, mejor time to market de las soluciones y análisis más robustos con información más completa y diversa. Los SandBox permiten mayor flexibilidad a las áreas de negocio, en un ambiente mucho más robusto, y con procesos productivos que aseguran la correcta ejecución en ambientes más complejos.</p>
+
+<p>Gracias Datamarts!, <strong>Bienvenidos SandBox!</strong></p>
+
+      </div><!-- .post-content -->
+      <footer class="post-meta">
+        <time class="published"
+          datetime="2018-11-06 00:00">Tuesday, November  6, 2018</time>
+      </footer><!-- .post-meta -->
+    </article><!-- .post -->
+
+    <!-- Next/previous post navigation TBD -->
+    <!--
+    <nav class="read-next">
+      <h2 class="read-next-title">Read Next</h2>
+      <div class="post-feed">
+        <article class="post post-card">
+          <div class="post-card-inside">
+            <a class="post-card-thumbnail" href="#"><img src="#" alt="" /></a>
+            <div class="post-card-content">
+              <header class="post-header">
+                <h3 class="post-title"><a href="#" rel="bookmark">Previous Post Title</a></h3>
+              </header>
+              <footer class="post-meta">
+                <time class="published" datetime="">Previous post date</time>
+              </footer>
+            </div>
+          </div>
+        </article>
+        <article class="post post-card">
+          <div class="post-card-inside">
+            <a class="post-card-thumbnail" href="#"><img src="#" alt="" /></a>
+            <div class="post-card-content">
+              <header class="post-header">
+                <h3 class="post-title"><a href="#" rel="bookmark">Next Post Title</a></h3>
+              </header>
+              <footer class="post-meta">
+                <time class="published" datetime="">Next post date</time>
+              </footer>
+            </div>
+          </div>
+        </article>
+      </div>
+    </nav>
+    -->
+  
+  </div><!-- .inner-medium -->
+</div><!-- .outer-->
+
+  </main><!-- .site-content -->
+  <footer id="colophon" class="site-footer">
+  <div class="footer-top outer">
+    <div class="inner">
+      <div class="footer-widgets">
+
+        <div class="widget footer-branding">
+          
+          
+          <p class="site-logo">
+            <a href='/'><img src="/images/logo.png" alt="Logo" /></a>
+          </p>
+          
+          
+          
+          <p class="site-description">
+            Huemul Solutions
+          </p>
+          
+        </div><!-- .widget -->
+
+        
+        <nav class="widget footer-navigation">
+          <div class="footer-nav-inside">
+            
+            <div class="secondary-nav">
+              <h2 class="widget-title">Company</h2>
+              <ul class="secondary-menu">
+                
+                <li>
+                  <a href="/blog/">Blog</a>
+                </li>
+                
+              </ul>
+            </div><!-- .secondary-nav -->
+            
+            
+            
+            <div class="social-nav">
+              <h2 class="widget-title">Community</h2>
+              <ul class="social-links">
+  
+  <li>
+    <a href="https://github.com/HuemulSolutions/huemul-bigdatagovernance" target="_blank" rel="noopener">GitHub</a>
+  </li>
+  
+  <li>
+    <a href="https://www.linkedin.com/company/huemul-solutions" target="_blank" rel="noopener">LinkedIn</a>
+  </li>
+  
+  <li>
+    <a href="https://mvnrepository.com/artifact/com.huemulsolutions.bigdata/huemul-bigdatagovernance" target="_blank" rel="noopener">Maven Repository</a>
+  </li>
+  
+</ul><!-- .social-links -->
+
+            </div><!-- .social-nav -->
+            
+          </div><!-- .footer-nav-inside -->
+        </nav><!-- .widget -->
+        
+        
+        
+      </div><!-- .footer-widgets -->
+    </div><!-- .inner -->
+  </div><!-- .outer -->
+
+  <div class="site-info outer">
+    <div class="inner">
+      &copy; Stackbit. All rights reserved.
+      &nbsp;
+      
+      <a href="https://www.stackbit.com" target="_blank" rel="noopener" >Made with Stackbit</a>.
+      
+    </div><!-- .inner -->
+  </div><!-- .site-info -->
+
+</footer><!-- .site-footer -->
+
+</div><!-- .site -->
+
+        <!-- Scripts -->
+        <script src="/assets/js/plugins.js"></script>
+        <script src="/assets/js/init.js"></script>
+        <script src="/assets/js/main.js"></script>
+		
+		<script type='text/javascript'>
+    //All settings are optional. Remove them to use the defaults
+    var hdWidget = {
+        text: "Contáctanos", //text on the widget tab
+        position: "right", //You can use "right" or "left" to position the widget
+        bgColor: "#4c5b6b", //background color
+        fgColor: "#ffffff", //text color
+        borderColor: "#fff", //color of the border around the widget
+        categoryId: 0, //pre-selected category in the widget. Get the ID from the admin panel
+        autoShow: 0 //auto show the widget after X seconds. "0" to disable auto showing
+    };
+    
+    //you can also open or close the widget programmatically
+    //by calling _hdWidget.toggleWidget() anywhere in your code
+</script>
+<script type='text/javascript' src='https://demohuemul.jitbit.com/helpdesk/js/support-widget-light.js'></script>
+    </body> 
+</html>
