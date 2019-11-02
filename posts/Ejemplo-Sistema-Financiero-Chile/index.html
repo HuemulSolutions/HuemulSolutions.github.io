@@ -83,7 +83,9 @@
       
       <div class="post-content">
         <h2 id="introducción">Introducción</h2>
-<p>Los datos del sistema financiero permiten visualizar el estado de resultados y balance de los distintos bancos existentes en Chile a cierta fecha. Este ejemplo permite cargar estos archivos, estructurarlos y dejarlos disponibles en tablas en Hive.</p>
+<p>Los datos del sistema financiero permiten visualizar el estado de resultados y balance de los chilenos a cierta fecha. Este ejemplo permite cargar estos archivos al cluster BigData, estructurarlos y dejarlos disponibles en tablas sobre Hive.</p>
+
+<p>Puedes descargar este documento en versión PDF desde <a href="/pdf/HuemulSolutions%20-%20Ejecuci%F3n%20con%20datos%20del%20Sistema%20Financiero%20Chileno.pdf">aquí</a></p>
 
 <p>Para ejecutar este ejemplo, se han creado tres ficheros que contienen todo lo necesario, se explican a continuación:</p>
 
@@ -98,7 +100,7 @@
     </ul>
   </li>
   <li><strong>huemul_install_sbif.sh</strong>: Shell para crear directorios en HDFS y copiar archivo RAW.</li>
-  <li><strong>huemul_drivers.zip</strong>: Drivers utilizados por Huemul, contiene lo siguiente:
+  <li><strong>huemul-drivers.zip</strong>: Drivers utilizados por Huemul, contiene lo siguiente:
     <ul>
       <li>huemul-bigdatagovernance-2.1.jar: Framework Huemul BigData</li>
       <li>huemul-sql-decode-1.0.jar: Componente de Huemul para obtener traza</li>
@@ -110,10 +112,14 @@
   </li>
 </ul>
 
-<p>Los ficheros pueden ser descargados desde el siguiente link:
-www.huemulsolutions.com/ejemplos/sbif_21/</p>
+<p>Los ficheros pueden ser descargados desde el siguiente link:</p>
+<ul>
+  <li><a href="/ejemplos/sbif_21/demo-sbif.zip">demo-sbif.zip</a></li>
+  <li><a href="/ejemplos/sbif_21/huemul_install_sbif.sh">huemul_install_sbif.sh</a></li>
+  <li><a href="/ejemplos/sbif_21/huemul-drivers.zip">huemul-drivers.zip</a></li>
+</ul>
 
-<p>Para efectos de este ejemplo, los códigos se han ejecutado sobre un ambiente Hortonworks versión 2.6.5 en modo Sandbox, por tanto los tiempos de ejecución no serán óptimos.</p>
+<p>Para efectos de este ejemplo, los códigos se han ejecutado sobre un ambiente Hortonworks versión 2.6.5 en modo Sandbox, por tanto los tiempos de ejecución no son representativos.</p>
 
 <p>A continuación, se explican los pasos necesarios para subir los datos, ejecutar los procesos y visualizar los resultados.</p>
 
@@ -133,7 +139,7 @@ www.huemulsolutions.com/ejemplos/sbif_21/</p>
 
 <h2 id="ejecutar-script-de-ambientación-en-clúster">Ejecutar Script de ambientación en Clúster</h2>
 
-<p>Lo primero que se requiere es subir los archivos de ambientación, para ello debes seguir los siguientes pasos:</p>
+<p>Lo primero que se requiere es subir los archivos de ambientación al cluster, para ello debes seguir los siguientes pasos:</p>
 
 <p>Abrir shell y dar acceso de ejecución sobre el fichero huemul_install_sbif.sh</p>
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">chmod </span>775 huemul_install_sbif.sh
@@ -177,10 +183,18 @@ www.huemulsolutions.com/ejemplos/sbif_21/</p>
 </ul>
 
 <p>Puedes descargar estos binarios desde los siguientes links:</p>
+<ul>
+  <li><a href="/ejemplos/sbif_21/demo_settings-2.1.jar">demo_settings-2.1.jar</a></li>
+  <li><a href="/ejemplos/sbif_21/demo_catalogo-2.1.jar">demo_catalogo-2.1.jar</a></li>
+  <li><a href="/ejemplos/sbif_21/demo_sbif-2.1.jar">demo_sbif-2.1.jar</a></li>
+</ul>
 
-<p>www.huemulsolutions.com/ejemplos/sbif_21/demo_settings-2.1.jar
-www.huemulsolutions.com/ejemplos/sbif_21/demo_catalogo-2.1.jar
-www.huemulsolutions.com/ejemplos/sbif_21/demo_sbif-2.1.jar</p>
+<p>También puedes descargar el código fuente desde GitHub y compilar el código tú mismo:</p>
+<ul>
+  <li>git@github.com:HuemulSolutions/demo_settings.git</li>
+  <li>git@github.com:HuemulSolutions/demo_catalogo.git</li>
+  <li>git@github.com:HuemulSolutions/demo_sbif.git</li>
+</ul>
 
 <h2 id="ejecutar-script-de-configuración-de-modelo-de-control">Ejecutar Script de Configuración de Modelo de Control.</h2>
 <p>Huemul requiere de un modelo de control, el cual registra toda la actividad de Huemul, tanto a nivel de procesos (ejecuciones, estado, etc), como también de los metadatos de las interfaces leidas y las tablas creadas.</p>
