@@ -24,7 +24,7 @@ Para ejecutar este ejemplo, se han creado tres ficheros que contienen todo lo ne
      - 201807: Carpeta que contiene los datos del sistema financiero para julio del 2018
 * **huemul_install_sbif.sh**: Shell para crear directorios en HDFS y copiar archivo RAW.
 * **huemul-drivers.zip**: Drivers utilizados por Huemul, contiene lo siguiente:
-     - huemul-bigdatagovernance-2.4.jar: Framework Huemul BigData
+     - huemul-bigdatagovernance-2.6.jar: Framework Huemul BigData
      - huemul-sql-decode-1.0.jar: Componente de Huemul para obtener traza
      - postgresql-9.4.1212.jar: Driver para conexión con modelo de control implementado en PostgreSQL
      - ojdbc7.jar: Driver para conexión con modelo de control implementado en Oracle
@@ -32,9 +32,9 @@ Para ejecutar este ejemplo, se han creado tres ficheros que contienen todo lo ne
      - mssql-jdbc-7.2.1.jre8.jar: Driver para conexión con modelo de control implementado en SQL Server.
 
 Los ficheros pueden ser descargados desde el siguiente link:
-* [demo-sbif.zip](/ejemplos/sbif_24/demo-sbif.zip)
-* [huemul_install_sbif.sh](/ejemplos/sbif_24/huemul_install_sbif.sh)
-* [huemul-drivers.zip](/ejemplos/sbif_24/huemul-drivers.zip)
+* [demo-sbif.zip](/ejemplos/sbif_26/demo-sbif.zip)
+* [huemul_install_sbif.sh](/ejemplos/sbif_26/huemul_install_sbif.sh)
+* [huemul-drivers.zip](/ejemplos/sbif_26/huemul-drivers.zip)
 
 
 Para efectos de este ejemplo, los códigos se han ejecutado sobre un ambiente Hortonworks versión 2.6.5 en modo Sandbox, por tanto los tiempos de ejecución no son representativos.
@@ -88,17 +88,17 @@ En el path /user/data/production/raw/sbif/201807
 
 Finalmente, debes incluir los archivos JAR compilados de los proyectos demo:
 
-* **demo_settings-2.4.jar**: Contiene los path y connectionString globales para todos los proyectos.
+* **demo_settings-2.6.jar**: Contiene los path y connectionString globales para todos los proyectos.
      - Este proyecto usa los siguientes archivos paramétricos:
      - prod-demo-setting-control-connection: Contiene el connectionString para el modelo de control
      - prod-demo-setting-impala-connection: Contiene el connectionString para conectar con Impala
-* **demo_catalogo-2.4.jar**: Carga los datos de productos y negocios. Estas interfaces fueron creadas manualmente como ejemplo para esta demo
-* **demo_sbif-2.4.jar**: Carga los datos descargados desde el sitio web de la CMF
+* **demo_catalogo-2.6.jar**: Carga los datos de productos y negocios. Estas interfaces fueron creadas manualmente como ejemplo para esta demo
+* **demo_sbif-2.6.jar**: Carga los datos descargados desde el sitio web de la CMF
 
 Puedes descargar estos binarios desde los siguientes links:
-* [demo_settings-2.4.jar](/ejemplos/sbif_24/demo_settings-2.4.jar)
-* [demo_catalogo-2.4.jar](/ejemplos/sbif_24/demo_catalogo-2.4.jar)
-* [demo_sbif-2.4.jar](/ejemplos/sbif_24/demo_sbif-2.4.jar)
+* [demo_settings-2.6.jar](/ejemplos/sbif_26/demo_settings-2.6.jar)
+* [demo_catalogo-2.6.jar](/ejemplos/sbif_26/demo_catalogo-2.6.jar)
+* [demo_sbif-2.6.jar](/ejemplos/sbif_26/demo_sbif-2.6.jar)
 
 También puedes descargar el código fuente desde GitHub y compilar el código tú mismo:
 * git@github.com:HuemulSolutions/demo_settings.git
@@ -122,9 +122,9 @@ Para efectos de esta guía, utilizaremos una base de datos PostgreSQL versión 1
 
 Una vez creado el servidor de base de datos PostgreSQL, creamos una base de datos llamada “huemul_control”. (NOTA: revisa que la IP del clúster pueda acceder al servidor de BBDD).
 
-Luego, debes crear las tablas del modelo de control, para ello debes descargar el script con la versión de Huemul que estés usando (en nuestro caso la versión 2.4), el link es el siguiente
+Luego, debes crear las tablas del modelo de control, para ello debes descargar el script con la versión de Huemul que estés usando (en nuestro caso la versión 2.6), el link es el siguiente
 
-https://github.com/HuemulSolutions/huemul-bigdatagovernance/blob/master/src/main/resources/Instalacion/huemul_bdg_2.4_minor.sql
+https://github.com/HuemulSolutions/huemul-bigdatagovernance/blob/master/src/main/resources/Instalacion/huemul_bdg_2.6_minor.sql
 
 En nuestro caso utilizamos dBeaver para trabajar con la base de datos y ejecutar el script.
 ![figura 4.2. Script SQL ejecutado correctamente.](/images/paper_sbif/imagen_04_02.png)
@@ -154,7 +154,7 @@ Se deben ejecutar en el siguiente orden:
 Se ejecuta con el siguiente comando:
 
 ```shell
-spark-submit --master local --jars huemul-bigdatagovernance-2.4.jar,huemul-sql-decode-1.0.jar,demo_settings-2.4.jar,demo_catalogo-2.4.jar,postgresql-9.4.1212.jar --class com.yourcompany.catalogo.process_negocio  demo_sbif-2.4.jar environment=production,ano=2018,mes=6
+spark-submit --master local --jars huemul-bigdatagovernance-2.6.jar,huemul-sql-decode-1.0.jar,demo_settings-2.6.jar,demo_catalogo-2.6.jar,postgresql-9.4.1212.jar --class com.yourcompany.catalogo.process_negocio  demo_sbif-2.6.jar environment=production,ano=2018,mes=6
 ```
 
 El resultado de esta ejecución es el siguiente:
@@ -169,7 +169,7 @@ La siguiente imagen muestra la tabla cargada con los datos:
 Se ejecuta con el siguiente comando:
 
 ```shell
-spark-submit --master local --jars huemul-bigdatagovernance-2.4.jar,huemul-sql-decode-1.0.jar,demo_settings-2.4.jar,demo_catalogo-2.4.jar,postgresql-9.4.1212.jar --class com.yourcompany.catalogo.process_producto  demo_sbif-2.4.jar environment=production,ano=2018,mes=6
+spark-submit --master local --jars huemul-bigdatagovernance-2.6.jar,huemul-sql-decode-1.0.jar,demo_settings-2.6.jar,demo_catalogo-2.6.jar,postgresql-9.4.1212.jar --class com.yourcompany.catalogo.process_producto  demo_sbif-2.6.jar environment=production,ano=2018,mes=6
 ```
 
 El resultado de esta ejecución es el siguiente:
@@ -184,7 +184,7 @@ La siguiente imagen muestra la tabla cargada con los datos:
 Se ejecuta con el siguiente comando:
 
 ```shell
-spark-submit --master local --jars huemul-bigdatagovernance-2.4.jar,huemul-sql-decode-1.0.jar,demo_settings-2.4.jar,demo_catalogo-2.4.jar,postgresql-9.4.1212.jar --class com.yourcompany.sbif.process_mensual  demo_sbif-2.4.jar environment=production,ano=2018,mes=6
+spark-submit --master local --jars huemul-bigdatagovernance-2.6.jar,huemul-sql-decode-1.0.jar,demo_settings-2.6.jar,demo_catalogo-2.6.jar,postgresql-9.4.1212.jar --class com.yourcompany.sbif.process_mensual  demo_sbif-2.6.jar environment=production,ano=2018,mes=6
 ```
 
 El resultado de esta ejecución es el siguiente:
